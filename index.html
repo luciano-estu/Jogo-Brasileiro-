@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>7A0</title><link rel="stylesheet" href="style.css"></head>
+<body><header><b>7A0</b><span>Monte seu time • Solo + Amigos</span></header>
+<main>
+<section id="home"><div class="card"><h1>⚽ 7A0</h1><button onclick="solo()">🎮 Modo Solo</button><button onclick="friends()">👥 Modo Amigos</button></div></section>
+<section id="friends" class="hide"><div class="card"><h2>👥 Modo Amigos</h2><button onclick="createRoom()">Criar sala</button><input id="code" placeholder="Código"><button onclick="joinRoom()">Entrar</button><p id="room"></p><button onclick="home()">← Voltar</button></div></section>
+<section id="build" class="hide"><div class="card"><h2>🎲 Montagem</h2><select id="formation"></select><button id="draw" onclick="drawClub()">Sortear clube</button><p id="club">Nenhum clube</p><div id="players"></div></div><div class="card"><h2>🏟️ Seu time</h2><div id="field"></div><p>Jogadores: <b id="n">0/11</b> • OVR: <b id="ovr">0</b></p><button id="ready" disabled onclick="ready()">Confirmar time</button></div></section>
+<section id="league" class="hide"><div class="card"><h2>🏆 Campeonato <span id="round"></span></h2><button onclick="next()">⚽ Próxima rodada</button><button onclick="allRounds()">⏩ Simular restante</button></div><div class="card" id="result">Nenhum jogo.</div><div class="card"><h2>📊 Classificação</h2><div id="table"></div></div><div class="card"><h2>🥇 Artilharia</h2><div id="scorers"></div></div></section>
+<section id="match" class="hide"><div class="card"><h2>⚔️ Partida entre amigos</h2><p id="friendStatus">Aguardando os dois times.</p><p>Meu OVR: <b id="myOvr">0</b> • Amigo: <b id="friendOvr">0</b></p><button id="play" disabled onclick="friendMatch()">⚽ Jogar partida</button><div id="friendResult"></div></div></section>
+</main>
+<script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script><script src="script.js"></script></body></html>
